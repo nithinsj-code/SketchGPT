@@ -1,60 +1,87 @@
-# AI Drawing Pad
-The AI Drawing Pad is a web application that allows users to create digital drawings using an intuitive user interface. The application consists of two main folders: backend and frontend. The backend folder contains the server-side code and the frontend folder contains the client-side code.
+# SketchGPT 🪄
 
-## Features
-- User-friendly drawing interface
-- Drawing tools such as brush, eraser, color picker, and shapes
-- Multiple brush sizes and colors
-- Save and load drawings
-- Export drawings as images
-- Integration with AI algorithms for image processing and enhancements
-# Technologies Used
-**The AI Drawing Pad utilizes the following technologies:**
+SketchGPT is an interactive web application that allows users to sketch on a digital canvas and uses Google's powerful **Gemini 3.6 Flash AI** to playfully guess, analyze, and describe the drawing in real-time. 
 
-- Backend: Node.js, Express.js
-- Frontend: HTML, CSS, JavaScript
-- AI: OpenAI GPT, TensorFlow.js
-  
-## Getting Started
-To get started with the AI Drawing Pad, follow the instructions below:
+With a beautifully sleek, minimalist neo-brutalist design, SketchGPT bridges the gap between your doodles and cutting-edge Large Language Models!
+
+## ✨ Features
+- **Clean Minimalist UI:** High-contrast, glassmorphic black-and-white aesthetic for a premium drawing experience.
+- **AI Vision Integration:** Seamlessly talks to Gemini to analyze your drawings.
+- **Intuitive Canvas:** Smooth, lag-free drawing interface built with React.
+- **Responsive Design:** Optimized for both desktop and mobile users.
+
+## 🛠 Technologies Used
+- **Frontend:** React, HTML5 Canvas, Vanilla CSS
+- **Backend:** Python, Flask, Gunicorn
+- **AI:** Google Generative AI (`gemini-3.6-flash`)
+
+## 🚀 Getting Started
+
+Follow these instructions to run SketchGPT locally on your machine.
 
 ### Prerequisites
-- Node.js (version 6.20.0 or higher)
-  
-### Installation
-- Clone the repository: git clone `https://github.com/kodepirate/Draw-Pad`
-- Navigate to the backend folder: cd ai-drawing-pad/backend
-- Install the dependencies: npm install
-- Start the server: npm start
-- Open another terminal window/tab
-- Navigate to the frontend folder: cd ../frontend
-- Install the dependencies: npm install
-- Start the client application: npm start
-- Open a web browser and visit http://localhost:3000 to access the AI Drawing Pad.
-## Contributing
-We welcome contributions from the community to enhance the AI Drawing Pad. To contribute, please follow these steps:
+- Node.js (for the frontend)
+- Python 3.9+ (for the backend)
+- A [Google Gemini API Key](https://aistudio.google.com/app/apikey)
 
-### 1 Fork the repository on GitHub.
-- Clone your forked repository: git clone https://github.com/kodepirate/Draw-Pad
-- Create a new branch for your feature/bug fix: git checkout -b feature/bug-fix-name
-- Make your modifications and test thoroughly.
-- Commit your changes: git commit -m "Description of your changes"
-- Push to the branch: git push origin feature/bug-fix-name
-- Open a pull request on the original repository and provide a detailed description of your changes.
-## Bugs and Feature Requests
-If you encounter any bugs or have ideas for new **features,** please open an issue on the GitHub repository. We appreciate your feedback and suggestions and you can contribute to it too!
+### Backend Setup
+1. Clone the repository and navigate to the backend directory:
+   ```bash
+   git clone https://github.com/nithinsj-code/SketchGPT.git
+   cd SketchGPT/backend
+   ```
+2. Create and activate a virtual environment (recommended):
+   ```bash
+   python -m venv myenv
+   # On Windows:
+   .\myenv\Scripts\activate
+   # On Mac/Linux:
+   source myenv/bin/activate
+   ```
+3. Install the dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. Create a `.env` file in the `backend` folder and add your Gemini API key:
+   ```env
+   GEMINI_API_KEY=your_api_key_here
+   ```
+5. Start the backend server:
+   ```bash
+   python app.py
+   ```
 
-## License
-The AI Drawing Pad is open-source software licensed under the MIT License.
+### Frontend Setup
+1. Open a new terminal window and navigate to the frontend folder:
+   ```bash
+   cd SketchGPT/frontend
+   ```
+2. Install the Node dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the React development server:
+   ```bash
+   npm start
+   ```
+4. Open your browser and visit `http://localhost:3000` to start drawing!
 
-## Acknowledgments
-We would like to thank the following libraries and resources that made this project possible:
+## 🌍 Deployment
+SketchGPT is fully ready for production deployment:
+- **Backend:** Deploy the `backend` directory to [Render](https://render.com) using the `requirements.txt` and `gunicorn app:app` as the start command. Don't forget to add `GEMINI_API_KEY` to Render's environment variables.
+- **Frontend:** Deploy the `frontend` directory to [Vercel](https://vercel.com). Add an environment variable named `REACT_APP_API_URL` pointing to your Render backend URL.
 
-- TensorFlow.js
-- Node.js
-- React
-- Bootstrap
-A big shoutout to all contributors who have helped improve the AI Drawing Pad!
+## 🤝 Contributing
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-## Contact
-For any further questions or inquiries, please contact our team at aniketaditya2002@gmail.com.
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+Distributed under the **MIT License**. See `LICENSE` for more information.
+
+## ✉️ Contact
+Nithin - [GitHub Profile](https://github.com/nithinsj-code)
