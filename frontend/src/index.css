@@ -7,13 +7,21 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #0f172a; /* Deep slate dark background */
+  background: #f8fafc; /* Clean off-white background */
   background-image: 
-    radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
-    radial-gradient(at 50% 0%, hsla(225,39%,30%,0.2) 0, transparent 50%), 
-    radial-gradient(at 100% 0%, hsla(339,49%,30%,0.2) 0, transparent 50%);
-  color: #f8fafc;
+    radial-gradient(at 0% 0%, hsla(0,0%,90%,1) 0, transparent 50%), 
+    radial-gradient(at 100% 100%, hsla(0,0%,95%,1) 0, transparent 50%);
+  color: #0f172a; /* Dark almost black text */
   min-height: 100vh;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 code {
