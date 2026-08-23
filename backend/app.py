@@ -14,8 +14,8 @@ CORS(app) # Allow cross-origin requests from the frontend
 
 # Configure Gemini API
 genai.configure(api_key=os.environ.get("GEMINI_API_KEY"))
-# Using the newer 2.5 flash model as requested
-model = genai.GenerativeModel('gemini-2.5-flash')
+# Using the newer 3.6 flash model as requested by the API error
+model = genai.GenerativeModel('gemini-3.6-flash')
 
 @app.route('/predict', methods=['POST'])
 def predict():
