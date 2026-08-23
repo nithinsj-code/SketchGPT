@@ -5,7 +5,8 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <h1>Draw Shapes</h1>
+      <h1>SketchGPT</h1>
+      <p className="subtitle">Draw something and let our AI guess and describe it!</p>
       <DrawingCanvas />
     </div>
   );

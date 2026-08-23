@@ -88,29 +88,30 @@ const DrawingCanvas = () => {
   }
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '20px' }}>
-      <div style={{ border: '2px solid black' }}>
+    <div className="canvas-container">
+      <div className="canvas-wrapper">
         <canvas
           ref={canvasRef}
-          width={256}
-          height={256}
+          width={400}
+          height={400}
           onMouseDown={startDrawing}
           onMouseMove={draw}
           onMouseUp={endDrawing}
           onMouseLeave={endDrawing}
+          style={{ cursor: 'crosshair', touchAction: 'none' }}
         />
       </div>
       
-      <div style={{ display: 'flex', gap: '10px' }}>
-        <button onClick={clearCanvas} style={{ padding: '10px 20px', cursor: 'pointer' }}>Clear</button>
-        <button onClick={handleAnalyze} disabled={isLoading} style={{ padding: '10px 20px', cursor: 'pointer' }}>
-          {isLoading ? 'Analyzing...' : 'Analyze Drawing'}
+      <div className="button-group">
+        <button onClick={clearCanvas} className="btn btn-secondary">Clear Canvas</button>
+        <button onClick={handleAnalyze} disabled={isLoading} className="btn btn-primary">
+          {isLoading ? '✨ Analyzing...' : '✨ Analyze Drawing'}
         </button>
       </div>
 
       {resultText && (
-        <div style={{ maxWidth: '400px', padding: '20px', backgroundColor: '#f0f0f0', borderRadius: '8px' }}>
-          <h3>Gemini says:</h3>
+        <div className="result-box">
+          <h3>🪄 Gemini says:</h3>
           <p>{resultText}</p>
         </div>
       )}
